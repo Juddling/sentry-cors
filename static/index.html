@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        function initSentry() {
+            Sentry.init({
+                dsn: "https://examplePublicKey@o0.ingest.sentry.io/0",
+                release: "sample-release@v0.1",
+                debug: true,
+            });
+        }
+    </script>
+    <script
+        src="https://browser.sentry-cdn.com/6.10.0/bundle.min.js"
+        integrity="sha384-nsIkfmMh0uiqg+AwegHcT1SMiPNWnhZmjFDwTshLTxur6ZPNaGT8vwT+vHwI5Jag"
+        crossorigin="anonymous"
+        onload="initSentry()"
+    ></script>
+
+    <link rel="stylesheet" href="http://another-origin.localhost:3000/cors.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="http://another-origin.localhost:3000/cors.delay.css" crossorigin="anonymous" />
+</head>
+<body>
+    <p>Example app to test reporting of CORS errors</p>
+</body>
+</html>
